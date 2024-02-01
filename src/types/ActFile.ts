@@ -25,6 +25,6 @@ export class ActFile {
 
     toFile(filePath: string) {
         const buffer = this.toBuffer();
-        writeFile(filePath, buffer);
+        return writeFile(filePath, buffer);
     }
 }

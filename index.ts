@@ -1,13 +1,3 @@
-import { ActFile } from "./src/types/ActFile";
-import { Action } from "./src/types/Action";
-import { AnchorPoint } from "./src/types/AnchorPoint";
-import { Frame } from "./src/types/Frame";
-import { Layer } from "./src/types/Layer";
+import { ActFile } from "./src/index";
 
-module.exports = {
-    ActFile,
-    Action,
-    Frame,
-    Layer,
-    AnchorPoint
-};
+console.log(ActFile);

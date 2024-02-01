@@ -20,7 +20,7 @@ Or from Github
 * [ActFile](#actFile)
     * [fromFile(filepath)](#actFile.fromFile) `static async function`
     * [fromBuffer(buffer)](#actFile.fromBuffer) `static function`
-    * [toFile(filepath)](#actFile.toFile) `function`
+    * [toFile(filepath)](#actFile.toFile) `async function`
     * [toBuffer()](#actFile.toBuffer) `function`
     * [header](#actFile.header) `string`
     * [version](#actFile.version) `number`

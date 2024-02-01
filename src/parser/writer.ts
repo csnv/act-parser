@@ -69,7 +69,7 @@ export function writeActFile(actFile: ActFile): Buffer {
 
     write(Write.UInt32, 4, actFile.events.length);
     actFile.events.forEach(event => write(Write.String, 40, event));
-    actFile.intervals.forEach(interval => write(Write.Float, 4, interval));
+    actFile.intervals.forEach(interval => write(Write.Float, 4, interval / 25));
 
     return buffer;
 }

@@ -70,13 +70,15 @@ export function parseActFile(buffer: Buffer): ActFile {
         }
         
         // Intervals list, one for each action
+        // Intervals are float numbers that must be multiplied by 25
+        // to get the time in milliseconds
         // Default value is 6
         actFile.intervals = [];
         for (let i = 0; i < numActions; i++) {
             if (version >= 0x202)
-                actFile.intervals.push(read(buffer, Read.Float, 4));
+                actFile.intervals.push(read(buffer, Read.Float, 4) * 25);
             else
-                actFile.intervals.push(6);
+                actFile.intervals.push(6 * 25);
         }
 
     } catch(e) {

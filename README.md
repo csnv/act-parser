@@ -72,7 +72,9 @@ Reads file specified in `filepath` and returns an ActFile instance. This is the 
 
 Example:
 ```JS
-const monsterFile = ActFile.fromFile('./monster.act');
+import { ActFile } from "@csnvrag/act-parser";
+
+const monsterFile = await ActFile.fromFile('./monster.act');
 ```
 <a name="actFile.fromBuffer"></a>
 
@@ -81,6 +83,9 @@ Parses a `Buffer` with the contents of an .act file into an ActFile instance. In
 
 Example:
 ```JS
+import { ActFile } from "@csnvrag/act-parser";
+import { readFile } from "fs/promises";
+
 const fileBuffer = await readFile('./monster.act');
 const monsterFile = ActFile.fromBuffer(fileBuffer);
 ```
@@ -88,7 +93,7 @@ const monsterFile = ActFile.fromBuffer(fileBuffer);
 
 <a name="actFile.toFile"></a>
 
-### toFile(filepath)() `async function`
+### toFile(filepath) `async function`
 Writes current act file into a file, specified in filepath.
 
 Example:

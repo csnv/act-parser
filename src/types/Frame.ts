@@ -1,4 +1,3 @@
-import { ActFile } from "./ActFile";
 import { Action } from "./Action";
 import { AnchorPoint } from "./AnchorPoint";
 import { Layer } from "./Layer";

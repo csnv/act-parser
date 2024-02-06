@@ -21,13 +21,18 @@ In those cases, all that's required is to assign the `atk` event (adding it to t
 > [!NOTE]
 > The atk event must be added to all actions in the attack animation index (action index from 16 to 23, included)
 
-![Grand peco with no atk](img/atk-event-gp1.png "Grand peco atk")
+![Grand peco with no atk](img/atk-event-gp1.png)
 
-![Grand peco adding atk](img/atk-event-gp-adding.png "Grand peco atk")
+![Grand peco adding atk](img/atk-event-gp-adding.png)
 
-![Grand peco atk added](img/atk-event-gp2.png "Grand peco atk")
+![Grand peco atk added](img/atk-event-gp2.png)
 
 Once done, save file and repack it into your GRF.
 
 ## WALKDELAY SYNC
+> [!NOTE]
+> Currently, only [Heracles](https://github.com/HeraclesHub/Heracles) supports WALKDELAY_SYNC with `DamageDelay`.
+
 If your emulator uses WALKDELAY SYNC and you want to use these fixed act files, you must update the `DamageDelay` value in the `mob_db.conf` server file, for the monsters you fixed. For such, multiply the frame index with the `atk` event by the speed value in ActEditor. In the previous example of Grand Peco, that would be 13 * 100 = 1300.
+
+![Damage delay calculation](img/walk-delay-gp.png)
